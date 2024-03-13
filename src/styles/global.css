@@ -1,0 +1,94 @@
+:root {
+  /*svg flueben*/
+  --checkmark-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="%234EAF4E" d="M176.49 95.51a12 12 0 0 1 0 17l-56 56a12 12 0 0 1-17 0l-24-24a12 12 0 1 1 17-17L112 143l47.51-47.52a12 12 0 0 1 16.98.03M236 128A108 108 0 1 1 128 20a108.12 108.12 0 0 1 108 108m-24 0a84 84 0 1 0-84 84a84.09 84.09 0 0 0 84-84"/></svg>');
+
+  .checkmark-list {
+    display: grid;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1rem;
+      color: #595566;
+
+      &::before {
+        content: "";
+        flex-shrink: 0;
+        width: 1.6rem;
+        aspect-ratio: 1;
+        background: var(--checkmark-icon) 50% 50% / contain no-repeat;
+      }
+    }
+  }
+
+  /*clamp*/
+  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vi, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vi, 1rem);
+  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vi, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vi, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vi, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.771rem + 0.8651vi, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vi, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vi, 3.8147rem);
+
+  /* Colors */
+  --primary-one: #ffcc4a;
+  --primary-two: #4eaf4e;
+  --primary-three: #181818;
+  --secondary-one: #f5f5f5;
+  --secondary-two: #ffffff;
+
+  /* font sizes*/
+  --heading-one: 3.125rem;
+  --heading-two: 2.8125rem;
+  --heading-three: 2.5rem;
+  --heading-four: 2.1875rem;
+  --heading-five: 1.875rem;
+  --heading-six: 1.5625rem;
+  --p-size: 1rem;
+
+  /*font families */
+  --font-cabin: Cabin;
+  --font-lato: Lato;
+  font-family: "Cabin", sans-serif;
+  font-family: "Lato", sans-serif;
+
+  /*buttons*/
+  --btn-font: 1.125rem;
+  --btn-black-padding: 1rem 2.0625rem;
+  --btn-yellow-padding: 1rem 2.3125rem;
+
+  /*gap*/
+  --gap: 0.625rem;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Cabin", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/*
+article {
+    background: yellow;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.display-heading-2 {
+    font-size: var(--step-1);
+}
+
+*/

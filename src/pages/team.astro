@@ -1,0 +1,109 @@
+---
+import Teamcard from "../components/Teamcard.astro";
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Teambanner from "../components/Teambanner.astro";
+import Blackboxteam from "../components/Blackboxteam.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Team</title>
+  </head>
+  <body>
+    <header>
+      <Nav />
+    </header>
+    <section>
+      <Teambanner />
+      <div class="teamtext">
+        <h3>Meet Our Great Team</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad
+          minim veniam, quis nostrud exercitation.
+        </p>
+      </div>
+      <section class="teamgrid">
+        <Teamcard
+          img="/src/images/sarah.png"
+          title="Sarah Jasmine"
+          alt="Sarah"
+          text="Leverage agile frameworks to provide a robust synopsis for high level overviews."
+        />
+        <Teamcard
+          img="/src/images/john.png"
+          title="John Carter"
+          alt="John"
+          text="Leverage agile frameworks to provide a robust synopsis for high level overviews."
+        />
+        <Teamcard
+          img="/src/images/daisy.png"
+          title="Daisy Stella"
+          alt="Daisy"
+          text="Leverage agile frameworks to provide a robust synopsis for high level overviews."
+        />
+        <Teamcard
+          img="/src/images/maya.png"
+          title="Maya Elizabeth"
+          alt="Maya"
+          text="Leverage agile frameworks to provide a robust synopsis for high level overviews."
+        />
+        <Teamcard
+          img="/src/images/ryan.png"
+          title="Ryan Jackson"
+          alt="Ryan"
+          text="Leverage agile frameworks to provide a robust synopsis for high level overviews."
+        />
+        <Teamcard
+          img="/src/images/lilly.png"
+          title="Lilly Victoria"
+          alt="Lilly"
+          text="Leverage agile frameworks to provide a robust synopsis for high level overviews."
+        />
+      </section>
+      <Blackboxteam
+        title="CONTACT"
+        heading="Ready To Talk?"
+        text="Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Massa placerat duis ultricies lacus sed turpis. Pellentesque  pellentesque habitant morbi tristique."
+        btn1="your email address"
+        btn2="Send Message"
+        img="/src/images/boxteamimg.png"
+      />
+    </section>
+  </body>
+
+  <style>
+    section {
+      background-color: var(--secondary-one);
+    }
+    .teamtext {
+    }
+
+    h3 {
+      font-size: var(--heading-two);
+      color: var(--primary-three);
+      line-height: 3.625rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: var(--p-size);
+      font-weight: 400;
+      width: 39.375rem;
+      margin: auto;
+    }
+
+    .teamgrid {
+      background-color: var(--secondary-two);
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding:;
+    }
+  </style>
+</html>

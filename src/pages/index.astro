@@ -1,0 +1,115 @@
+---
+import Nav from "../components/Nav.astro";
+import Aboutbanner from "../components/Aboutbanner.astro";
+import Aboutvision from "../components/Aboutvision.astro";
+import Teamcard from "../components/Teamcard.astro";
+import Aboutgrowing from "../components/Aboutgrowing.astro";
+import Abouthistory from "../components/Abouthistory.astro";
+import Blackbox from "../components/Blackbox.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>About</title>
+  </head>
+  <body>
+    <header>
+      <Nav />
+    </header>
+    <Aboutbanner />
+    <Aboutvision img="/src/images/visonimg.jpg" />
+    <Aboutgrowing />
+    <Abouthistory img="/src/images/ourhistoryphoto.png" />
+    <section class="team">
+      <div class="teamtext">
+        <h2>OUR TEAM</h2>
+        <h3>We champion the bold to achieve the extraordinary</h3>
+        <p>
+          Ippsum is the result of synergy between our teams and our customers.
+          Our company culture is focused on excellent productivity, customer
+          satisfaction, respect for team.
+        </p>
+      </div>
+      <div class="teamgrid">
+        <Teamcard
+          img="/src/images/sarah.png"
+          title="Sarah Jasmine"
+          alt="Sarah"
+          text="Leverage agile frameworks to provide a robust synopsis for high level overviews."
+        />
+        <Teamcard
+          img="/src/images/john.png"
+          title="John Carter"
+          alt="John"
+          text="Leverage agile frameworks to provide a robust synopsis for high level overviews."
+        />
+        <Teamcard
+          img="/src/images/daisy.png"
+          title="Daisy Stella"
+          alt="Daisy"
+          text="Leverage agile frameworks to provide a robust synopsis for high level overviews."
+        />
+      </div>
+    </section>
+    <Blackbox
+      title="BOOK NOW"
+      heading="Better Consult, Better Results"
+      text="Our software development agency has a growth up to 30% per each year. If you are result-oriented, not afraid to take initiative – drop us a note and join our team!"
+      btn="+800 1234 654"
+      img="/src/images/booknow.png"
+    />
+  </body>
+</html>
+
+<style>
+  body {
+  }
+
+  .teamgrid {
+    background-color: var(--secondary-one);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .teamtext {
+    padding: 3rem 3rem 0rem 3rem;
+  }
+
+  .team {
+    background-color: var(--secondary-one);
+  }
+
+  h2 {
+    font-size: var(--p-size);
+    color: var(--primary-three);
+    background-color: var(--primary-one);
+    font-family: "Lato", sans-serif;
+    padding: 0.5rem 0.9375rem;
+    border-radius: 1.25rem;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: var(--gap);
+    letter-spacing: 0.145rem;
+  }
+
+  h3 {
+    font-size: var(--heading-one);
+    color: var(--primary-three);
+    font-family: "Cabin", sans-serif;
+    line-height: 3.625rem;
+    width: 40rem;
+  }
+
+  p {
+    width: 40.1875rem;
+    font-size: var(--p-size);
+    width: 41rem;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+  }
+</style>

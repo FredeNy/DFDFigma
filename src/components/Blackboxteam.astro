@@ -1,0 +1,98 @@
+---
+import "../styles/global.css";
+const { title, img, text, btn1, btn2, alt, heading } = Astro.props;
+---
+
+<section>
+  <article class="blackbox">
+    <h2>{title}</h2>
+    <div class="gridbox">
+      <div class="boxtext">
+        <h3>{heading}</h3>
+        <p>{text}</p>
+        <a class="btn1">{btn1}</a>
+        <a class="btn2">{btn2}</a>
+      </div>
+      <div>
+        <img src={img} class="boximage" alt={alt} />
+      </div>
+    </div>
+  </article>
+
+  <style>
+    section {
+      background-color: var(--secondary-two);
+      padding: 4rem;
+    }
+
+    .blackbox {
+      border-radius: 1.25rem;
+      background-color: var(--primary-three);
+      padding: 3rem;
+      font-size: 1rem;
+      max-width: 60rem;
+      margin: auto;
+    }
+    .gridbox {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .boximage {
+        border-radius: 1.25rem;}
+
+    h2 {
+      font-size: var(--p-size);
+      color: var(--secondary-two);
+      background: #323232;
+      padding: 0rem 0.6875rem;
+      border-radius: 1.25rem;
+      display: inline-flex;
+      align-items: flex-start;
+      gap: var(--gap);
+      line-height: 1.475rem;
+      letter-spacing: 0.145rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: var(--heading-two);
+      color: var(--secondary-two);
+      line-height: 3.625rem;
+      width: 30rem;
+    }
+
+    p {
+      color: var(--secondary-two);
+      width: 26rem;
+      line-height: 1.475rem;
+    }
+
+    .btn1 {
+      display: inline-block;
+      font-family: "Lato", sans-serif;
+      padding: 15px 45px;
+      background-color: var(--secondary-two);
+      color: #a9a9a9;
+      text-decoration: none;
+      font-size: 15px;
+      border-radius: 1.25rem;
+      max-width: fit-content;
+      margin-top: 1rem;
+      margin-right: 1rem;
+    }
+
+    .btn2 {
+      display: inline-block;
+      font-family: "Lato", sans-serif;
+      padding: 15px 45px;
+      background-color: var(--primary-two);
+      color: var(--secondary-two);
+      text-decoration: none;
+      font-size: 15px;
+      border-radius: 1.25rem;
+      max-width: fit-content;
+      margin-top: 1rem;
+    }
+  </style>
+</section>

@@ -1,0 +1,144 @@
+---
+import "../styles/global.css";
+const { img } = Astro.props;
+---
+
+<section>
+  <div class="ourvisionbox">
+    <h2>OUR VISION</h2>
+    <h3>Turn your ideas into reality.</h3>
+    <p>
+      Capitalize on low hanging fruit to identify a ballpark value added
+      activity beta test. Override the digital divide with additional from
+      DevOps.
+    </p>
+    <div class="flueben">
+      <ul class="checkmark-list">
+        <li>
+          Bring to the table win-win survival strategies to ensure proactive
+          domination. At the end of the day.
+        </li>
+        <li>
+          Capitalize on low hanging fruit to identify a ballpark value added
+          activity to beta test override the digital.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <figure>
+      <img src={img} class="visionimg" />
+    </figure>
+  </div>
+  <div class="description">
+    <dl>
+      <div>
+        <dt>Sucessful Work</dt>
+        <dd>1128+</dd>
+      </div>
+      <div>
+        <dt>Team member</dt>
+        <dd>908+</dd>
+      </div>
+      <div>
+        <dt>Happy customers</dt>
+        <dd>258+</dd>
+      </div>
+      <div>
+        <dt>Creative idea</dt>
+        <dd>564+</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: var(--secondary-two);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 3rem 0rem 3rem;
+  }
+
+
+
+  h2 {
+    font-size: var(--p-size);
+    color: var(--secondary-two);
+    background-color: var(--primary-two);
+    padding: 0rem 0.6875rem;
+    border-radius: 1.25rem;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: var(--gap);
+    line-height: 147.5%; /* 1.475rem */
+    letter-spacing: 0.145rem;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: var(--heading-two);
+    color: var(--primary-three);
+    line-height: 3.625rem;
+  }
+
+  p {
+    font-size: var(--p-size);
+    width: 36.875rem;
+    font-weight: 400;
+  }
+
+  .visionimg {
+    border-radius: 1.25rem;
+    flex-shrink: 0;
+    inline-size: 100%;
+    display: block;
+  }
+
+  .ourvisionbox {
+    padding: min(2rem, 5%);
+  }
+
+  figure {
+    margin-inline: auto;
+    max-inline-size: 400px;
+    margin: 3rem;
+    display: block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -2rem;
+      top: -1rem;
+      background: green;
+      width: 150px;
+      height: 100px;
+      border-radius: 1.25rem;
+      /*z-index: -1;*/
+    }
+  }
+  .description {
+    
+  
+  dl {
+    margin: 3rem;
+    text-align: center;
+
+    display: flex;
+    gap: 3rem;
+
+    > * {
+      display: flex;
+      flex-direction: column-reverse;
+      font-size: 1.125rem;
+      color: #181818;
+
+      :last-child {
+        font-size: var(--heading-one);
+        font-weight: 500;
+      }
+    }
+  }
+}
+</style>

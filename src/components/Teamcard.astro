@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+const { title, img, alt, text } = Astro.props;
+---
+
+<article class="teamcard">
+  <img src={img} class="teamimage" alt={alt} />
+  <h2>{title}</h2>
+  <h3>{text}</h3>
+</article>
+
+<style>
+  article {
+    background: var(--secondary-one);
+    padding: 3rem;
+
+    h2 {
+      font-size: var(--heading-five);
+      color: var(--primary-three);
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: var(--p-size);
+      font-weight: 400;
+    }
+  }
+
+  .teamimage {
+    border-radius: 1.25rem;
+  }
+
+  .teamcard {
+    text-align: center;
+  }
+</style>

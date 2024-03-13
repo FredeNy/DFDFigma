@@ -1,0 +1,98 @@
+---
+import "../styles/global.css";
+const { img } = Astro.props;
+---
+
+<section>
+  <div class="history">
+  <h2>OUR HISTORY</h2>
+  <h3>Better Website Means A User Experience</h3>
+  <p>
+    Ippsum is the result of synergy between our teams and our customers. Our
+    company culture is focused on excellent productivity, customer satisfaction,
+    respect for team and individual achievements.
+  </p>
+</div>
+  <div>
+    <figure>
+      <img src={img} class="hisimg" />
+    </figure>
+</div>
+</section>
+
+<style>
+  section {
+    background-color: var(--secondary-two);
+    padding: 3rem;
+  }
+
+.history {
+   line-height: 1.475rem; 
+   display: grid;
+   gap: 2rem;
+
+}
+
+  h2 {
+    font-size: var(--p-size);
+    color: var(--secondary-two);
+    background-color: var(--primary-two);
+    padding: 0rem 0.6875rem;
+    border-radius: 1.25rem;
+    gap: var(--gap);
+    line-height: 1.475rem; 
+    letter-spacing: 0.145rem;
+    text-align: center;
+    margin: auto;
+    width:20%;
+   
+  }
+
+  h3 {
+    text-align: center;
+    font-size: var(--heading-one);
+    color: var(--primary-three);
+    font-family: "Cabin", sans-serif;
+    line-height: 3.625rem;
+    max-width: 41.75rem;
+    margin: auto;
+  }
+
+  p {
+    width: 45.75rem;
+    margin: auto;
+    font-family: "Lato", sans-serif;
+  }
+
+  .hisimg {
+    border-radius: 1.25rem;
+    flex-shrink: 0;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  }
+/*
+  figure {
+    margin-inline: auto;
+    max-inline-size: 400px;
+    margin: 3rem;
+    display: block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 16rem;
+      top: 13rem;
+      background: green;
+      width: 10.25rem;
+      height: 11.4375rem;
+      flex-shrink: 0;
+      border-radius: 1.25rem;
+      /*z-index: -1;*/
+      */
+    }
+  }
+ 
+</style>

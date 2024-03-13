@@ -1,0 +1,55 @@
+---
+import "../styles/global.css";
+---
+
+<section>
+  <div class="bannerbox">
+    <h2>SERVICES</h2>
+    <h3>Creative Services For Boost Your Business Growth</h3>
+  </div>
+</section>
+
+<style>
+  section {
+    background-image: url("src/images/aboutbanner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+    overflow: hidden;
+    padding: min(3rem, 5%);
+  }
+
+  h2 {
+    font-size: var(--p-size);
+    color: var(--primary-three);
+    background-color: var(--primary-one);
+    font-family: "Lato", sans-serif;
+    padding: 0.5rem 0.9375rem;
+    border-radius: 1.25rem;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: var(--gap);
+    letter-spacing: 0.145rem;
+  }
+
+  h3 {
+    font-size: var(--heading-one);
+    color: var(--primary-three);
+    font-family: "Cabin", sans-serif;
+    line-height: 3.625rem;
+    max-width: 41.75rem;
+  }
+
+  .bannerbox {
+    display: inline-flex;
+  width: min(65ch, 100% - 2rem);
+  margin-inline: auto;
+    padding: min(2rem, 5%);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap);
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5.5px);
+    border-radius: 1.8125rem;
+  }
+</style>
