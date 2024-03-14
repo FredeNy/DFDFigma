@@ -1,9 +1,62 @@
-<nav>
-  <ul>
-    <li><a href="/">About</a></li>
-    <li><a href="/casestudysingle">Case study single</a></li>
-    <li><a href="/team">Team</a></li>
-    <li><a href="/servicesingle">Service single</a></li>
-  </ul>
-</nav>
-<style></style>
+<header>
+  <nav>
+    <ul>
+      <li><a href="/">About</a></li>
+      <li><a href="/servicesingle">Service single</a></li>
+      <li><a href="/team">Team</a></li>
+      <li><a href="/casestudysingle">Case study single</a></li>
+
+
+    </ul>
+  </nav>
+</header>
+<style>
+  header * {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(27, 27, 27, 0.91);
+    backdrop-filter: blur(10.5px); 
+  }
+
+  header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5em;
+  }
+
+  header li {
+    display: block;
+    padding: 35px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 5px;
+    color: var(--secondary-two);
+    border-style: none;
+    margin: auto;
+  }
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:active {
+    text-decoration: none;
+  }
+
+  a,
+  a:visited,
+  a:active {
+    color: var(--secondary-two);
+  }
+
+  a:hover {
+    background-color: var( --primary-two);
+    transition: 0.5s;
+  }
+</style>

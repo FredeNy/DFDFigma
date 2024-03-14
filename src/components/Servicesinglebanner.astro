@@ -4,14 +4,14 @@ import "../styles/global.css";
 
 <section>
   <div class="bannerbox">
-    <h2>TEAM</h2>
-    <h3>The Consultors</h3>
+    <h2>SERVICE SINGLE</h2>
+    <h3>Services Details</h3>
   </div>
 </section>
 
 <style>
   section {
-    background-image: url("/images/teambanner.png");
+    background-image: url("/images/servicebanner.png");
     background-repeat: no-repeat;
     background-size: cover;
     flex-shrink: 0;
@@ -41,13 +41,19 @@ import "../styles/global.css";
   }
 
   .bannerbox {
+display: inline-flex;
+padding: 2rem 3.75rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.625rem; 
     display: inline-flex;
-    width: min(65ch, 100% - 2rem);
+    /*width: min(65ch, 100% - 5rem);*/
+/*
     margin-inline: auto;
     padding: min(2rem, 5%);
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--gap);
+    gap: var(--gap);*/
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(5.5px);
     border-radius: 1.8125rem;

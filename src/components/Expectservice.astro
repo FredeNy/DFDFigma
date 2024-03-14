@@ -1,0 +1,100 @@
+---
+import "../styles/global.css";
+const { img } = Astro.props;
+---
+
+<section>
+  <div>
+    <figure>
+      <img src={img} class="workimg" />
+    </figure>
+  </div>
+  <div class="workbox">
+    <h2>WE'LL WORK WITH YOU</h2>
+    <h3>What To Expect</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
+    <div class="flueben">
+      <ul class="checkmark-list">
+        <li>
+          Bring to the table win-win survival strategies to ensure proactive
+          domination. At the end of the day.
+        </li>
+        <li>
+          Capitalize on low hanging fruit to identify a ballpark value added
+          activity to beta test override the digital.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: var(--secondary-two);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    gap: 10rem;
+  }
+
+  h2 {
+    font-size: var(--p-size);
+    color: var(--primary-three);
+    background-color: var(--primary-one);
+    padding: 0rem 0.6875rem;
+    border-radius: 1.25rem;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: var(--gap);
+    line-height: 147.5%; /* 1.475rem */
+    letter-spacing: 0.145rem;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: var(--heading-two);
+    color: var(--primary-three);
+    line-height: 3.625rem;
+  }
+
+  p {
+    font-size: var(--p-size);
+    width: 36.875rem;
+    font-weight: 400;
+  }
+
+  .workimg {
+    border-radius: 1.25rem;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .workbox {
+    padding: min(2rem, 5%);
+  }
+
+  figure {
+    margin-inline: auto;
+    max-inline-size: 400px;
+    margin: 3rem;
+    display: block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 17rem;
+      top: -1rem;
+      background: green;
+      width: 150px;
+      height: 100px;
+      border-radius: 1.25rem;
+      /*z-index: -1;*/
+    }
+  }
+</style>

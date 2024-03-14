@@ -5,15 +5,14 @@ import "../styles/global.css";
 <main>
   <section class="full">
     <header>
-      <h2>GROWING WITH OUR CLIENTS</h2>
-      <h3>Our core values & principles</h3>
-      <p class="histext">
-        Capitalize on low hanging fruit to identify a ballpark value added
-        activity beta test. Override the digital divide with additional from
-        DevOps.
+      <h3>Financial Projections</h3>
+      <p class="fintext">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
       </p>
     </header>
-
     <ul role="list">
       <li>
         <h3>The Balance Sheet</h3>
@@ -55,19 +54,7 @@ import "../styles/global.css";
 <style>
   section {
     background-color: var(--secondary-one);
-  }
-
-  header h2 {
-    font-size: var(--p-size);
-    color: var(--primary-three);
-    background-color: var(--primary-one);
-    font-family: "Lato", sans-serif;
-    padding: 0.5rem 0.9375rem;
-    border-radius: 1.25rem;
-    display: inline-flex;
-    align-items: flex-start;
-    gap: var(--gap);
-    letter-spacing: 0.145rem;
+    padding: 4rem;
   }
 
   header h3 {
@@ -77,18 +64,21 @@ import "../styles/global.css";
     line-height: 3.625rem;
   }
 
-  .histext {
+  .fintext {
     font-size: var(--p-size);
     font-weight: 400;
+    font-family: "Lato", sans-serif;
+    line-height: 1.475rem;
+  }
+
+  .litext {
+    line-height: 1.475rem;
   }
 
   :root {
     --content-width: 50rem;
   }
 
-  .litext {
-    line-height: 1.475rem;
-  }
   main {
     padding-block: 4rem;
     display: grid;
@@ -134,7 +124,7 @@ import "../styles/global.css";
     overflow-x: auto;
 
     li {
-      flex-basis: min(200px, 90%);
+      flex-basis: min(300px, 90%);
       flex-shrink: 0;
       background: #ebebeb;
       color: #595566;

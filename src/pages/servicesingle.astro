@@ -1,16 +1,27 @@
 ---
-
+import Nav from "../components/Nav.astro";
+import "../styles/global.css";
+import Servicebanner from "../components/Servicesinglebanner.astro";
+import Financial from "../components/Financialservice.astro";
+import Expectservice from "../components/Expectservice.astro";
+import Servicehistory from "../components/Servicehistory.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Service single </title>
-	</head>
-	<body>
-		<h1>Service single</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Service single</title>
+  </head>
+  <body>
+    <header>
+      <Nav />
+    </header>
+    <Servicebanner />
+    <Financial />
+    <Expectservice img="/images/workimg.png" />
+	<Servicehistory img="/images/hisservice.png" />
+  </body>
 </html>
