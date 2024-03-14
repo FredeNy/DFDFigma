@@ -24,11 +24,12 @@ const { img } = Astro.props;
   section {
     background-color: var(--secondary-two);
     padding: 3rem;
+    margin-inline: auto;
+    max-width: 900px;
   }
 
 .history {
    line-height: 1.475rem; 
-   display: grid;
    gap: 2rem;
 
 }
@@ -44,7 +45,8 @@ const { img } = Astro.props;
     letter-spacing: 0.145rem;
     text-align: center;
     margin: auto;
-    width:20%;
+    margin-bottom: 2rem;
+    width:30%;
    
   }
 
@@ -60,9 +62,11 @@ const { img } = Astro.props;
 
   p {
     font-size:var(--step--1);
-    width: 45.75rem;
+    max-width: 45.75rem;
     margin: auto;
     font-family: "Lato", sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .hisimg {
@@ -71,7 +75,8 @@ const { img } = Astro.props;
     display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 100%;
+  height: auto;
   }
 /*
   figure {

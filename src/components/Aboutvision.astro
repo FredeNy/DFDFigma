@@ -56,7 +56,8 @@ const { img } = Astro.props;
   section {
     background-color: var(--secondary-two);
     display: grid;
-    grid-template-columns: 1fr auto;
+    /*grid-template-columns: 1fr auto;*/
+    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
     padding: 3rem 3rem 0rem 3rem;
   }
 
@@ -83,7 +84,8 @@ const { img } = Astro.props;
   }
 
   p {
-    font-size:var(--step--1)
+    font-size:var(--step--1);
+    max-width: 65ch;
     width: 36.875rem;
     font-weight: 400;
     line-height: 1.425rem;
@@ -120,6 +122,10 @@ const { img } = Astro.props;
       z-index: -1;
     }
   }
+
+  .checkmark-list {
+    line-height: 1.425rem;
+  }
   .description {
    text-align: center;
   }
@@ -127,19 +133,20 @@ const { img } = Astro.props;
   dl {
     margin: 3rem;
     text-align: center;
-
     display: inline flex;
     gap: 3rem;
-
+   
     > * {
       display: flex;
       flex-direction: column-reverse;
       font-size: 1.125rem;
       color: #181818;
+    
 
       :last-child {
         font-size: var(--heading-one);
         font-weight: 500;
+       
       }
     }
   }
