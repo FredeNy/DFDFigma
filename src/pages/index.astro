@@ -73,7 +73,7 @@ import Blackbox from "../components/Blackbox.astro";
     background-color: var(--secondary-one);
 
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     /*grid-template-columns: 1fr 1fr 1fr;*/
   }
 
@@ -104,13 +104,13 @@ import Blackbox from "../components/Blackbox.astro";
     color: var(--primary-three);
     font-family: "Cabin", sans-serif;
     line-height: 3.625rem;
-    width: 40rem;
+    max-width: 40rem;
   }
 
   p {
     width: 40.1875rem;
     font-size: var(--p-size);
-    width: 41rem;
+    max-width: 41rem;
     font-weight: 400;
     font-family: "Lato", sans-serif;
     line-height: 1.425rem;
