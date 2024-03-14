@@ -30,33 +30,33 @@ const { img } = Astro.props;
       <img src={img} class="visionimg" />
     </figure>
   </div>
-  <div class="description">
-    <dl>
-      <div>
-        <dt>Sucessful Work</dt>
-        <dd>1128+</dd>
-      </div>
-      <div>
-        <dt>Team member</dt>
-        <dd>908+</dd>
-      </div>
-      <div>
-        <dt>Happy customers</dt>
-        <dd>258+</dd>
-      </div>
-      <div>
-        <dt>Creative idea</dt>
-        <dd>564+</dd>
-      </div>
-    </dl>
-  </div>
+  
 </section>
-
+<div class="description">
+  <dl>
+    <div>
+      <dt>Sucessful Work</dt>
+      <dd>1128+</dd>
+    </div>
+    <div>
+      <dt>Team member</dt>
+      <dd>908+</dd>
+    </div>
+    <div>
+      <dt>Happy customers</dt>
+      <dd>258+</dd>
+    </div>
+    <div>
+      <dt>Creative idea</dt>
+      <dd>564+</dd>
+    </div>
+  </dl>
+</div>
 <style>
   section {
     background-color: var(--secondary-two);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     padding: 3rem 3rem 0rem 3rem;
   }
 
@@ -86,6 +86,7 @@ const { img } = Astro.props;
     font-size:var(--step--1)
     width: 36.875rem;
     font-weight: 400;
+    line-height: 1.425rem;
   }
 
   .visionimg {
@@ -105,6 +106,7 @@ const { img } = Astro.props;
     margin: 3rem;
     display: block;
     position: relative;
+    isolation: isolate;
 
     &::before {
       content: "";
@@ -115,17 +117,18 @@ const { img } = Astro.props;
       width: 150px;
       height: 100px;
       border-radius: 1.25rem;
-      /*z-index: -1;*/
+      z-index: -1;
     }
   }
   .description {
-    
+   text-align: center;
+  }
   
   dl {
     margin: 3rem;
     text-align: center;
 
-    display: flex;
+    display: inline flex;
     gap: 3rem;
 
     > * {
