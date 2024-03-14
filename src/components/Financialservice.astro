@@ -62,6 +62,8 @@ import "../styles/global.css";
     color: var(--primary-three);
     font-family: "Cabin", sans-serif;
     line-height: 3.625rem;
+    font-weight: 600;
+    font-style: normal;
   }
 
   .fintext {
@@ -74,7 +76,14 @@ import "../styles/global.css";
   .litext {
     line-height: 1.475rem;
   }
+  ul:has(> li:nth-child(2)) li:nth-child(2) {
+    background: var(--primary-three);
+    color: #fff;
 
+    h3 {
+      color: var(--secondary-two);
+    }
+  }
   :root {
     --content-width: 50rem;
   }
